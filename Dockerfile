@@ -17,10 +17,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
 # Copy the published output from the build stage to the final stage
-COPY --from=build /app/out .
+COPY --from=build /app/out . 
 
-# Expose the port that the application will run on
-EXPOSE 8081
 
 # Define the entry point for the container
 ENTRYPOINT ["dotnet", "Jenkins.dll"]
