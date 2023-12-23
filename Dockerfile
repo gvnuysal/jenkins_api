@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # Expose the port that the application will run on
-EXPOSE 80
+EXPOSE 1000
 
 # Define the entry point for the container
 ENTRYPOINT ["dotnet", "Jenkins.dll"]
